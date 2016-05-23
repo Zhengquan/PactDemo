@@ -1,0 +1,39 @@
+{
+  "provider": {
+    "name": "Something API"
+  },
+  "consumer": {
+    "name": "Consumer"
+  },
+  "interactions": [
+    {
+      "description": "A GET request to retrieve the something",
+      "provider_state": "There is a something with id 'tester'",
+      "request": {
+        "method": "get",
+        "path": "/somethings/tester",
+        "headers": {
+          "Accept": "application/json",
+          "Origin": "http://localhost.com",
+          "Referrer": "http://baidu.com/index.html",
+          "Agent": "1111",
+          "Service": "Product"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": "tester",
+          "firstName": "Totally",
+          "lastName": "Awesome"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "1.1.0"
+  }
+}
